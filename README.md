@@ -1,7 +1,34 @@
-<img width="1166" height="715" alt="Снимок экрана 2026-11-09 105211" src="https://github.com/user-attachments/assets/687d69b5-f031-4657-9614-8adb479198ef" />
-<p>красивый вывод логов</p>
-<img width="545" height="1238" alt="Снимок экрана 2026-11-09 105124" src="https://github.com/user-attachments/assets/37d1a53b-fdf5-4fc0-bb1b-1bd400b67aa9" />
-<p>при обновлении страницы всегда разные шутки</p>
-<img width="531" height="1226" alt="Снимок экрана 2026-11-09 105111" src="https://github.com/user-attachments/assets/a1215a0a-0637-4efd-a526-bc6ba435b9e1" />
-<img width="593" height="1218" alt="Снимок экрана 2026-11-09 103747" src="https://github.com/user-attachments/assets/0929e16d-97bf-43ad-be2c-10fddb90c99d" />
-<p>загрузочный экран</p>
+
+
+Приложение для получения случайных шуток с использованием API. 
+
+### 🛠 Использованные технологии (на оценку 5):
+* **Dio** — для выполнения HTTP-запросов.
+* **GetIt** — для внедрения зависимостей (управление экземпляром Dio и сервисом).
+* **Interceptors** — написан собственный перехватчик для автоматической подстановки API-ключа (`X-Api-Key`) в заголовки.
+* **PrettyDioLogger** — для красивого и читаемого вывода логов в консоль.
+* **Future.wait** — для параллельной загрузки сразу нескольких шуток за один раз.
+
+---
+
+## 📸 Визуальная демонстрация работы
+
+### 1. Экран загрузки
+При запуске приложения, пока идет запрос к серверу, отображается индикатор загрузки.
+<div align="center">
+  <img width="300" alt="Загрузочный экран" src="https://github.com/user-attachments/assets/a1215a0a-0637-4efd-a526-bc6ba435b9e1" />
+</div>
+
+### 2. Список шуток и обновление
+После загрузки отображается список шуток. При свайпе вниз (Pull-to-Refresh) список обновляется, и загружаются новые случайные шутки.
+<div align="center">
+  <img width="300" alt="Список шуток" src="https://github.com/user-attachments/assets/37d1a53b-fdf5-4fc0-bb1b-1bd400b67aa9" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img width="300" alt="Список шуток 2" src="https://github.com/user-attachments/assets/0929e16d-97bf-43ad-be2c-10fddb90c99d" />
+</div>
+
+### 3. Красивый вывод логов
+В консоли разработчика видно, как работают интерсепторы. Логи выводятся в удобочитаемом формате, виден статус-код ответа (200), время выполнения запроса и переданные заголовки.
+<div align="center">
+  <img width="800" alt="Красивый вывод логов" src="https://github.com/user-attachments/assets/687d69b5-f031-4657-9614-8adb479198ef" />
+</div>
